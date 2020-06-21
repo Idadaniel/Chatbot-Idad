@@ -14,8 +14,12 @@ const createBotMessage = (messages) => {
 };
 
 const sendBot = (messages) => {
+    const loader = document.getElementById('loader');
     const chatBody = document.getElementById('chat-body');
     const messageBody = createBotMessage(messages);
+    if(loader) {
+        chatBody.removeChild(loader);
+    }
     chatBody.innerHTML += messageBody;
     chatBody.scrollTop = chatBody.scrollHeight;
 }
@@ -35,7 +39,9 @@ const createUserMessage = (message) => {
 const sendUser = (message) => {
     const chatBody = document.getElementById('chat-body');
     const messageBody = createUserMessage(message);
+
     chatBody.innerHTML += messageBody;
+    chatBody.innerHTML += '<img src="./Images/loading.gif" alt="loader" id="loader">'
     chatBody.scrollTop = chatBody.scrollHeight;
 
 }
