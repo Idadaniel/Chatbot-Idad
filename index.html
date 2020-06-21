@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quick Help</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <script src="./index.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="header">Quick Help</div>
+      <div class="header">Quick Help</div>
 
-        <div class="chat-body" id="chat-body">
-            <div id="time"></div>
-            
+      <div class="chat-body" id="chat-body">
+        <div id="time"></div>
+      </div>
+      <footer>
+        <div id="buttons">
+          <button onclick="alert('coming soon')">
+            <img src="./Images/plus.svg" alt="" />
+          </button>
+
+          <button onclick="alert('coming soon')">
+            <img src="./Images/camera.svg" alt="" />
+          </button>
+          <button onclick="alert('coming soon')">
+            <img src="./Images/image.svg" alt="" />
+          </button>
+          <button onclick="alert('coming soon')">
+            <img src="./Images/mic.svg" alt="" />
+          </button>
         </div>
-        <footer>
-            <button onclick="alert('coming soon')">
-                <img src="./Images/plus.svg" alt=""></button>
-            <button onclick="alert('coming soon')">
-                <img src="./Images/camera.svg" alt="">
-            </button>
-            <button onclick="alert('coming soon')">
-                <img src="./Images/image.svg" alt="">
-            </button>
-            <button onclick="alert('coming soon')">
-                <img src="./Images/mic.svg" alt="">
-            </button>
 
-            <div class="input">
-
-                <input onkeydown="manageUserInput(event)" type="text" placeholder="Type message...">
-            </div>
-        </footer>
+        <div class="input">
+          <input
+            onkeydown="manageUserInput(event)"
+            type="text"
+            placeholder="Type message..."
+          />
+        </div>
+      </footer>
     </div>
-</body>
-
+  </body>
 </html>
