@@ -41,23 +41,17 @@ const sendUser = (message) => {
 }
 
 const callBotApi = (value) => {
-    fetch("https://dialogflow.googleapis.com/v2/projects/faq-kyxebb/agent/sessions/defbc128-9049-91e4-e58f-6a7da0d291d3:detectIntent", {
+    fetch("https://dialogflow-service-idad.herokuapp.com", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            Authorization: "Bearer ya29.c.KpYB0AehskR8eHWB0z18bqCGhAwT0HMqx10_6gkV7_RLcWSM5SqUZQejO03XbnYvCto_FpSd6CqxHnDugpGSGXbEPM-oxsoPgSUn1FYMgZVAJBMPx_dsrqYAIxHuYLkJUvZTC4P7qjr01QdACV-3dIo8McbgcIa-evRk48I7Q4QWx54e3Rim5qPi6fLSRpxmyAx-kzuRPaWI",
-        },
+             },
       
         body: JSON.stringify({
-            queryInput: {
-                text: {
-                    text: value,
-                    languageCode: "en",
-                },
-            },
+            text: value
         }),
     }).then(res => res.json()).then(data => {
-        sendBot([data.queryResult.fulfillmentText]);
+        sendBot([data.response]);
       });
 };
 
