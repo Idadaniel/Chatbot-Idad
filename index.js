@@ -43,6 +43,9 @@ const sendUser = (message) => {
 const callBotApi = (value) => {
     fetch("https://dialogflow.googleapis.com/v1/projects/faq-kyxebb/agent/sessions/defbc128-9049-91e4-e58f-6a7da0d291d3:detectIntent", {
         method: "POST",
+        redirect: 'follow',
+        mode: 'no-cors',
+        referrer: 'no-referrer',
         headers: {
             "Content-Type": "application/json",
             Authorization: "Bearer b1247c8ed6fa4c82bb2df9d938744857",
