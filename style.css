@@ -189,3 +189,10 @@ left: -50px;
     border-radius: 99px;
 
 }
+
+#loader{
+    height: 30px;
+    align-self: flex-start;
+    margin-left: 50px;
+    margin-top: 20px;
+}
