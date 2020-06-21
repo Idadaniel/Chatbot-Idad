@@ -41,11 +41,11 @@ const sendUser = (message) => {
 }
 
 const callBotApi = (value) => {
-    fetch("https://dialogflow.googleapis.com/v2/projects/faq-kyxebb/agent/sessions/defbc128-9049-91e4-e58f-6a7da0d291d3:detectIntent", {
+    fetch("https://dialogflow.googleapis.com/v1/projects/faq-kyxebb/agent/sessions/defbc128-9049-91e4-e58f-6a7da0d291d3:detectIntent", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            Authorization: "Bearer ya29.c.KpYB0AcILmr7-titB7KlPbExFYmblu0cJjPR7pOMK-J38UUDyFFJkxLAdosOUTF9JrqPq2DTIDwnrJbWc69auEwi7IM5S-Hk9qgy0WQpQmOBBCFHjgPc12fJFJJ1t2vEYLiyKL8l0k1yyxn4UDRvOnBw7uTpqflCBSLKshR1kBb8x8ghGVzj3gD1dBOMgZyVjE0nUB3Vrac_",
+            Authorization: "Bearer b1247c8ed6fa4c82bb2df9d938744857",
         },
       
         body: JSON.stringify({
